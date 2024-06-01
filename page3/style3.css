@@ -43,3 +43,6 @@ footer{
     background-color: #3A28A7;
     height:90px;
 }
+.hidden{
+    display:none;
+}

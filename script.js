@@ -1,7 +1,7 @@
 let searchbar=document.querySelector("#searchbar");
 let body=document.querySelector("body");
 let ok_btn=document.querySelector("#ok-btn");
-console.log(ok_btn);
+
 let category="NULL";
 dropdown.addEventListener("change",()=>{
     category=document.querySelector("#dropdown").value;
@@ -12,11 +12,18 @@ ok_btn.addEventListener("click",()=>{
     startquiz(category);
 });
 
+let myobj={
+    category:"NULL",
+    difficulty:"NULL"
+};
+
 let startquiz=(category)=>{
     if(category==="NULL"){
         alert("select a category other than null");
     }
     else {
+        myobj.category=category;
+        sessionStorage.setItem("mysessionstorage",JSON.stringify(myobj));
         window.location.href = "/page2/index2.html";
     }
 }
