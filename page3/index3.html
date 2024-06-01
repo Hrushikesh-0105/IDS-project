@@ -20,13 +20,13 @@
         <div>
             <h4 id="difficulty_level">Difficulty level: </h4>
         </div>
-        <div>Time left:</div>
+        <div id="time_left">Time left:</div>
         <br/>
         <div>
-           <section>
+           <section id="questions">
             <h3 id="question">this is a question</h3>
            </section>
-           <section>
+           <section id="options">
             <label for="option_1" id="label1">
                 <input type="radio" value="option_1" name="options" id="option_1">option1
             </label>
@@ -46,11 +46,45 @@
            </section>
            <br/>
 
+           <section id="time_table" class="hidden">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th>Time Taken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td id="time_1" class="time">t1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td id="time_2" class="time">t2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td id="time_3" class="time">t3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td id="time_4" class="time">t4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td id="time_5" class="time">t5</td>
+                        </tr>
+                    </tbody>
+                </table>
+           </section>
+
         </div>
         <button class="hidden" id="back_btn">back</button>
         <a class="hidden" id="exit_btn" href="/page2/index2.html" >Exit quiz</a>
         <button id="next_btn">Next</button>
         <button class="hidden" id="submit_btn">Submit</button>
+        <button class="hidden" id="Answer_Feedback">Answer Feedback</button>
         
     </main>
     <footer>

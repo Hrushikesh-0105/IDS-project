@@ -10,6 +10,10 @@ category_name.innerText+=" "+ myobj.category;
 let difficulty_name=document.querySelector("#difficulty_level");
 difficulty_name.innerText+=" "+ myobj.difficulty;
 
+//getting section tag of question and options
+let question_section=document.querySelector("#questions");
+let options_section=document.querySelector("#options");
+
 //getting the question and options from html
 let question=document.querySelector("#question");
 let option_1=document.querySelector("#label1");
@@ -26,6 +30,10 @@ const radiobutton4 = document.querySelector('#option_4');
 //accessing buttons
 let nextbtn=document.querySelector("#next_btn");
 let backbtn=document.querySelector("#back_btn");
+let answer_feedbackbtn=document.querySelector("#Answer_Feedback");
+
+//accesing table section for visibility after submission
+let table_section=document.querySelector("#time_table")
 
 //random questions generator
 let random_question=[];
@@ -76,7 +84,16 @@ fetchdata().then(data => {
     //adding functionality to next button
     nextbtn.addEventListener("click",()=>{
         if(nextbtn.innerText==="submit"){
-
+            //hiding questions and options
+            question_section.classList.add("hidden");
+            options_section.classList.add("hidden");
+            backbtn.classList.add("hidden");
+            exit_btn.classList.remove("hidden");
+            nextbtn.classList.add("hidden");
+            table_section.classList.remove("hidden");
+            document.querySelector("#time_left").classList.add("hidden");
+            answer_feedbackbtn.classList.remove("hidden");
+            return;
         }
         ++question_index;
         if(question_index===1){
@@ -125,6 +142,15 @@ fetchdata().then(data => {
     })
     radiobutton4.addEventListener('click',(evt)=>{
         user_answers[question_index]=4;
+    })
+
+    //adding functionality to answer feedback btn
+    answer_feedbackbtn.addEventListener("click",()=>{
+        myobj.correct_answers=correct_answers;
+        myobj.user_answers=user_answers;
+        myobj.question_sequence=random_question;
+        sessionStorage.setItem("mysessionstorage",JSON.stringify(myobj));
+        window.location.href = "/page4/index4.html";
     })
 });
 
