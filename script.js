@@ -35,11 +35,12 @@ let startquiz=(category)=>{
 let category_names=["NULL","Mathematics","Physics","Electrical","Mechanics","Biology","Chemistry","History","General Knowledge","Space and Astronomy"];
 
 show_hide_category=(value)=>{
+    value=value.toLowerCase();
     if(value!==""){
         for(let i=0;i<10;i++){
             console.log(i)
             let id=category_names[i];
-            if(category_names[i].includes(value)){
+            if(category_names[i].toLocaleLowerCase().includes(value)){
                 if(document.getElementById(id).classList.contains("hidden")){
                 document.getElementById(id).classList.remove("hidden")
                 }
@@ -58,5 +59,4 @@ show_hide_category=(value)=>{
 
 searchbar.addEventListener("input",()=>{
     show_hide_category(searchbar.value);
-    console.log(searchbar.value);
 })

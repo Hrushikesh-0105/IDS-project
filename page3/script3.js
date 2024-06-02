@@ -31,7 +31,10 @@ const radiobutton4 = document.querySelector('#option_4');
 let nextbtn=document.querySelector("#next_btn");
 let backbtn=document.querySelector("#back_btn");
 let answer_feedbackbtn=document.querySelector("#Answer_Feedback");
-
+let toggle_calculator=document.querySelector("#toggle_calculator");
+let toggle=false;
+//accessing calculator
+let calculator=document.querySelector("#calculator")
 //accesing table section for visibility after submission
 let table_section=document.querySelector("#time_table")
 
@@ -97,7 +100,7 @@ fetchdata().then(data => {
             backbtn.classList.add("hidden");
             exit_btn.classList.remove("hidden");
             nextbtn.classList.add("hidden");
-            table_section.classList.remove("hidden");
+            // table_section.classList.remove("hidden");
             document.querySelector("#time_left").classList.add("hidden");
             answer_feedbackbtn.classList.remove("hidden");
             let total_score=calculatescore();
@@ -105,7 +108,9 @@ fetchdata().then(data => {
             percentage.innerText=" "+String(total_score*100/5)+"%";
             inner_score_bar.style.width=String(total_score*100/5)+'%'; 
             score_container.classList.remove("hidden");
-
+            //hiding calculator button and calculator
+            calculator.classList.add("hidden");
+            toggle_calculator.classList.add("hidden");
             return;
         }
         ++question_index;
@@ -177,3 +182,86 @@ fetchdata().then(data => {
     };
 });
 
+
+//calculator
+let calculator_box=document.querySelector("#calculator_box");
+let calculate_btn=document.querySelector("#calculate");
+
+let calculator_string;
+let count_of_operator=0;
+let operators=["+","-","/","*"];
+calculator_box.addEventListener("input",()=>{
+    let count=0;
+    let length=calculator_box.value.length;
+    let string=calculator_box.value;
+    for(let i=0;i<length;i++){
+        if(operators.includes(string[i])){
+            ++count;
+        }
+        count_of_operator=count;
+    }
+    if(count>1){
+        alert("You can operate on only two numbers at once");
+        calculator_box.value=calculator_box.value.slice(0,length-1);
+    }
+    calculator_string=calculator_box.value;
+})
+
+
+calculate_btn.addEventListener("click",()=>{
+    let operation_array;
+    let current_operator;
+    if(count_of_operator!==1){
+        alert("Type only numbers and only (+,-,*,/) operators");
+        calculate_btn.value="";
+    }
+    if(calculator_string.includes("+")){
+        operation_array=calculator_string.split("+");
+        current_operator="+";
+    }
+    else if(calculator_string.includes("-")){
+        operation_array=calculator_string.split("-");
+        current_operator="-";
+    }
+    else if(calculator_string.includes("*")){
+        operation_array=calculator_string.split("*");
+        current_operator="*";
+    }
+    else if(calculator_string.includes("/")){
+        operation_array=calculator_string.split("/");
+        current_operator="/";
+    }
+    let result=0;
+    try{
+        switch(current_operator){
+            case '+':result=Number(operation_array[0])+Number(operation_array[1]);
+            break;
+            case '-':result=Number(operation_array[0])-Number(operation_array[1]);
+            break;
+            case '*':result=Number(operation_array[0])*Number(operation_array[1]);
+            break;
+            case '/':result=Number(operation_array[0])/Number(operation_array[1]);
+            break;
+        }
+
+        calculator_box.value=String(result);
+    }
+    catch(err){
+        alert("Type only numbers and only (+,-,*,/) operators")
+    }
+})
+
+toggle_calculator.addEventListener("click",()=>{
+    if(!toggle){
+        calculator.classList.remove("hidden");
+        toggle=true;
+        toggle_calculator.innerText="Hide Calculator"
+    }
+    else{
+        calculator.classList.add("hidden");
+        toggle=false;
+        toggle_calculator.innerText="Show Calculator"
+    }
+
+
+})
