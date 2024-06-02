@@ -30,3 +30,33 @@ let startquiz=(category)=>{
 
 //change category name for gk and space and astronomy while sendint ot other page
 
+
+
+let category_names=["NULL","Mathematics","Physics","Electrical","Mechanics","Biology","Chemistry","History","General Knowledge","Space and Astronomy"];
+
+show_hide_category=(value)=>{
+    if(value!==""){
+        for(let i=0;i<10;i++){
+            console.log(i)
+            let id=category_names[i];
+            if(category_names[i].includes(value)){
+                if(document.getElementById(id).classList.contains("hidden")){
+                document.getElementById(id).classList.remove("hidden")
+                }
+            }
+            else{
+                document.getElementById(id).classList.add("hidden")
+            }
+        }
+    }
+    else{
+        for(let i=0;i<10;i++){
+            document.getElementById(category_names[i]).classList.remove("hidden");
+        }
+    }
+}
+
+searchbar.addEventListener("input",()=>{
+    show_hide_category(searchbar.value);
+    console.log(searchbar.value);
+})

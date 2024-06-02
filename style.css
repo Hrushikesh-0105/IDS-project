@@ -105,3 +105,7 @@ footer{
     border-radius: 20px;
     margin-bottom: 5px;
 }
+
+.hidden{
+    display:none;
+}
