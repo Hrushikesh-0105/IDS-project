@@ -47,8 +47,13 @@ fetchdata().then(data => {
 
     //function to change color;
     colorchange=()=>{
+        //removing the previous colour after pressing next or back
+            option_1.style.backgroundColor="#5e44f0";
+            option_2.style.backgroundColor="#5e44f0";
+            option_3.style.backgroundColor="#5e44f0";
+            option_4.style.backgroundColor="#5e44f0";
             switch(correct_answers[question_index]){
-                case 1:option_1.style.backgroundColor=="#83f28f";
+                case 1:option_1.style.backgroundColor="#83f28f";
                     break;
                 case 2:option_2.style.backgroundColor="#83f28f";
                     break;

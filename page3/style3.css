@@ -33,8 +33,6 @@ body {
     padding: 0;
 }
 
-
-
 footer{
     display: flex;
     align-items: center;
@@ -45,4 +43,36 @@ footer{
 }
 .hidden{
     display:none;
+}
+
+#score_container{
+    height:60px;
+    width:300px;
+    background-color:aliceblue;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#score_bar{
+    height:20px;
+    width:280px;
+    background-color:#8573ed;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#inner_score_bar{
+    margin-left: 3px;
+    margin-top: 3px;
+    height:10px;
+    max-width:270px;
+    width:80%;
+    background-color:#3A28A7;
+    border: 2px solid #3A28A7 ;
+    border-radius: 10px;
+}
+#percentage{
+    margin-top: 4px;
+    text-align:right;
+}
+#score{
+    margin-left: 5px;
 }

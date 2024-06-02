@@ -35,6 +35,13 @@ let answer_feedbackbtn=document.querySelector("#Answer_Feedback");
 //accesing table section for visibility after submission
 let table_section=document.querySelector("#time_table")
 
+//accessing scorebar
+let score_container=document.querySelector("#score_container");
+let display_score=document.querySelector("#score");
+let inner_score_bar=document.querySelector("#inner_score_bar");
+let percentage=document.querySelector("#percentage");
+score_container.classList.add("hidden")
+
 //random questions generator
 let random_question=[];
 let correct_answers=[0,0,0,0,0];
@@ -93,6 +100,12 @@ fetchdata().then(data => {
             table_section.classList.remove("hidden");
             document.querySelector("#time_left").classList.add("hidden");
             answer_feedbackbtn.classList.remove("hidden");
+            let total_score=calculatescore();
+            display_score.innerText+=" "+String(total_score)+"/5";
+            percentage.innerText=" "+String(total_score*100/5)+"%";
+            inner_score_bar.style.width=String(total_score*100/5)+'%'; 
+            score_container.classList.remove("hidden");
+
             return;
         }
         ++question_index;
@@ -152,5 +165,15 @@ fetchdata().then(data => {
         sessionStorage.setItem("mysessionstorage",JSON.stringify(myobj));
         window.location.href = "/page4/index4.html";
     })
+
+    calculatescore=()=>{
+        let count=0;
+        for(let i=0;i<5;i++){
+            if(user_answers[i]===correct_answers[i]){
+                ++count;
+            }
+        }
+        return count;
+    };
 });
 
