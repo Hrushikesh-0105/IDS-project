@@ -116,7 +116,7 @@ fetchdata().then(data => {
             inner_score_bar.style.width=String(total_score*100/5)+'%'; 
             document.querySelector("#time_score").style.display="flex";
             for(let i=0;i<5;i++){
-                times[i].innerText=times_arr[i];
+                times[i].innerText=times_arr[i].toFixed(2);
             };
             return;
         }
