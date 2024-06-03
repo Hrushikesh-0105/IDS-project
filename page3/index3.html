@@ -13,16 +13,21 @@
         alt="logo" id="logo"/>
         <h1><i>QUIZZ.com</i></h1>
     </header>
-    <main>
+<main>
 <!-- headings -->
         <div id="titles">
-            <h1 id="category_name">category: </h1>
+            <h1 id="category_name">Category: </h1>
             <h2 id="difficulty_level">Difficulty level: </h2>
         </div>
 
         <div id="time_left" class="hidden">Time left:</div>
         <br/>
-<!-- calculator -->
+<div id="middle_part">
+ <!-- calculator -->
+    <div id="full_calculator">
+        <div>
+            <button id="toggle_calculator" >Show Calculator</button>
+        </div>
         <div id="calculator" class="hidden">
             <input type="text" placeholder="Calculate something" id="calculator_box">
             <button id="calculate">Calculate</button>
@@ -34,39 +39,44 @@
                 <h4 class="methods">Division: '/'</h4>
             </div>
         </div>
+    </div>
 
-        <button id="toggle_calculator" >Show Calculator</button>
-<!-- questions and options -->
-        <div>
+        
+ <!-- questions and options -->
+        <div id="question_ans">
            <section id="questions">
             <h3 id="question">this is a question</h3>
            </section>
            <section id="options">
             <label for="option_1" id="label1">
-                <input type="radio" value="option_1" name="options" id="option_1">option1
+                <input type="radio" value="option_1" name="options" id="option_1"><b>option1</b>
             </label>
             <br/>
             <label for="option_2" id="label2">
-                <input type="radio" value="option_2" name="options" id="option_2">option2
+                <input type="radio" value="option_2" name="options" id="option_2"><b>option2</b>
             </label>
             <br/>
             <label for="option_3" id="label3">
-                <input type="radio" value="option_3" name="options" id="option_3">option3
+                <input type="radio" value="option_3" name="options" id="option_3"><b>option3</b>
             </label>
             <br/>
             <label for="option_4" id="label4">
-                <input type="radio" value="option_4" name="options" id="option_4">option4
+                <input type="radio" value="option_4" name="options" id="option_4"><b>option4</b>
             </label>
             <br/>
            </section>
            <br/>
+        </div>
+</div>        
 <!-- time table -->
-           <section id="time_table" class="hidden">
+<div id="time_score" >
+        <div id="full_table">
+           <section id="time_table">
                 <table>
                     <thead>
                         <tr>
                             <th>Question</th>
-                            <th>Time Taken</th>
+                            <th>Time Taken (sec)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -94,8 +104,8 @@
                 </table>
            </section> 
         </div>
-<!-- score -->
-        <div id="score_container">
+ <!-- score -->
+        <div id="score_container" >
             <div id="inner_score_container">
                 <div id="score">Score:</div>
                 <div id="score_bar">
@@ -105,21 +115,40 @@
                 </div>
             </div>
         </div>
+</div>
 <!-- buttons -->
-        <button class="hidden" id="back_btn">back</button>
-        <a class="hidden" id="exit_btn" href="/page2/index2.html" >Exit quiz</a>
-        <button id="next_btn">Next</button>
-        <button class="hidden" id="submit_btn">Submit</button>
-        <button class="hidden" id="Answer_Feedback">Answer Feedback</button>
-        
+    <div id="navigation_btns">
+        <button class="hidden back" id="back_btn" >Back</button>
+        <a class="hidden back" id="exit_btn" href="/page2/index2.html" >Exit quiz</a>
+        <button id="next_btn" class="next">Next</button>
+        <button class="hidden next" id="submit_btn">Submit</button>
+        <button class="hidden next" id="Answer_Feedback">Answer Feedback</button>
+    </div>
     </main>
     <footer>
-        <div >
-            <pre id="footer_text">Copyright notice: © [2024] Hrushikesh Musaloj. All rights reserved.
-    Enrollment number:BT23CSE024.
-    .All rights reserved.
-            </pre>
+        <div id="footer_box">
+        <pre id="footer_text">Copyright notice: © [2024] Hrushikesh Musaloj. All rights reserved.
+Enrollment number:BT23CSE024.
+.All rights reserved.
+        </pre>
+    
+        <div id="links">
+            <a href="https://github.com/Hrushikesh-0105" target="_main" id="github">
+                <img 
+                height="46px"
+                src="/images/github.png"
+                alt="github logo"
+                >
+            </a>
+            <a href="https://www.linkedin.com/in/hrushikeshmusaloj" target="_main" id="linkedin"> 
+                <img
+                height="40px"
+                src="/images/linkedin.png"
+                alt="linkedin logo"
+                >
+            </a>
         </div>
+    </div>
     </footer>
     <script src="script3.js"></script>
 </body>

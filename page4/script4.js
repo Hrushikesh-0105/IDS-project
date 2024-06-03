@@ -48,18 +48,18 @@ fetchdata().then(data => {
     //function to change color;
     colorchange=()=>{
         //removing the previous colour after pressing next or back
-            option_1.style.backgroundColor="#5e44f0";
-            option_2.style.backgroundColor="#5e44f0";
-            option_3.style.backgroundColor="#5e44f0";
-            option_4.style.backgroundColor="#5e44f0";
+            option_1.style.backgroundColor="#3A28A7";
+            option_2.style.backgroundColor="#3A28A7";
+            option_3.style.backgroundColor="#3A28A7";
+            option_4.style.backgroundColor="#3A28A7";
             switch(correct_answers[question_index]){
-                case 1:option_1.style.backgroundColor="#83f28f";
+                case 1:option_1.style.backgroundColor="#9bf09b";
                     break;
-                case 2:option_2.style.backgroundColor="#83f28f";
+                case 2:option_2.style.backgroundColor="#9bf09b";
                     break;
-                case 3:option_3.style.backgroundColor="#83f28f";
+                case 3:option_3.style.backgroundColor="#9bf09b";
                     break;
-                case 4:option_4.style.backgroundColor="#83f28f";
+                case 4:option_4.style.backgroundColor="#9bf09b";
                     break;    
             }
         if(user_answers[question_index]!==correct_answers[question_index]){

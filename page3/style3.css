@@ -49,12 +49,138 @@ footer{
     display:none;
 }
 
+
+#calculator{
+    padding:20px;
+    height:150px;
+    width:250px;
+    border:5px solid #3A28A7;
+    background-color:aliceblue;
+    border-radius: 3px;
+}
+.methods{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#footer_text{
+    white-space: pre-line;
+    line-height: 1.6;
+    padding:10px 0;
+    font-size: 15px;
+    color:aliceblue
+}
+
+#titles{
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}
+
+#middle_part{
+    height:300px;
+}
+#full_calculator{
+    width:300px;
+    height:250px;
+    float:right;
+}
+#question_ans{
+    width:950px;
+    height:270px;
+}
+#question{
+    color:aliceblue
+}
+#options label{
+    display:block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    color: aliceblue;
+}
+
+#questions{
+    border: 10px solid #3A28A7;
+    border-radius: 10px;
+    background-color: #3A28A7;
+    margin-left: 20px;
+}
+
+#options{
+    border:10px solid #3A28A7;
+    border-radius: 10px;
+    background-color: #3A28A7;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#navigation_btns{
+    text-align: center;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 475px;
+    margin-right: 475px;
+}
+.next{
+    font-weight: bold;
+    float: right;
+    height:33px;
+    /* width:60px; */
+    color: white;
+    background-color:#3A28A7;
+    border: 10px solid #3A28A7;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.back{
+    font-weight: bold;
+    float:left;
+    color:white;
+    border: 5px solid #3A28A7;
+    border-radius: 5px;
+    height:25px;
+    width:auto;
+    background-color: #3A28A7;
+    
+}
+#toggle_calculator{
+    border:4px solid #3A28A7;
+    background-color: #3A28A7;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    color: aliceblue;
+    font-weight: bold;
+
+}
+
+#time_score{
+    display: flex;
+    padding: 10px;
+    margin-left: 350px;
+    height:300px;
+    width:600px;
+}
+
+#full_table{
+    font-weight: bold;
+    text-align: center;
+    background-color: aliceblue;
+    border:8px solid #3A28A7 ;
+    border-radius: 5px;
+    width:200px;
+    height:170px;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
 #score_container{
+    font-weight: bold;
     height:60px;
     width:300px;
     background-color:aliceblue;
     border: 2px solid white;
     border-radius: 10px;
+    margin-left: 100px;
+    margin-top:110px
 }
 #score_bar{
     height:20px;
@@ -80,28 +206,7 @@ footer{
 #score{
     margin-left: 5px;
 }
-#calculator{
-    padding:20px;
-    height:150px;
-    width:250px;
-    border:5px solid #3A28A7;
-    background-color:aliceblue;
-    border-radius: 3px;
-}
-.methods{
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-#footer_text{
-    white-space: pre-line;
-    line-height: 1.6;
-    padding:10px 0;
-    font-size: 15px;
-    color:aliceblue
-}
-
-#titles{
-    text-align: center;
-    color: aliceblue;
-    padding: 10px;
+#logo{
+    border:2px solid white;
+    border-radius: 60px;
 }

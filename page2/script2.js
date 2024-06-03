@@ -8,33 +8,24 @@ let myobj=JSON.parse(sessionStorage.getItem("mysessionstorage"));
 heading.innerText+=" "+myobj.category;
 
 easy_btn.addEventListener("click",()=>{
-    myobj.difficulty="easy";
+    myobj.difficulty="Easy";
     easy_btn.style.backgroundColor="#0EAD69";
     med_btn.style.backgroundColor="";
     hard_btn.style.backgroundColor="";
-    easy_btn.style.color="white";
-    med_btn.style.color="black";
-    hard_btn.style.color="black";
 })
 
 med_btn.addEventListener("click",()=>{
-    myobj.difficulty="med";
+    myobj.difficulty="Medium";
     easy_btn.style.backgroundColor="";
     med_btn.style.backgroundColor="#0EAD69";
     hard_btn.style.backgroundColor="";
-    med_btn.style.color="white";
-    easy_btn.style.color="black";
-    hard_btn.style.color="black";
 })
 
 hard_btn.addEventListener("click",()=>{
-    myobj.difficulty="hard";
+    myobj.difficulty="Hard";
     easy_btn.style.backgroundColor="";
     med_btn.style.backgroundColor="";
     hard_btn.style.backgroundColor="#0EAD69";
-    hard_btn.style.color="white";
-    easy_btn.style.color="black";
-    med_btn.style.color="black";
 })
 
 start_btn.addEventListener("click",()=>{

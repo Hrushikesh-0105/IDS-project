@@ -82,7 +82,6 @@ footer{
 
 #page_shifter{
     text-align: center;
-    
     height: 30px;
     margin-left: 475px;
     margin-right: 475px;
@@ -106,4 +105,8 @@ footer{
     width:60px;
     background-color: #3A28A7;
     
+}
+#logo{
+    border:2px solid white;
+    border-radius: 60px;
 }

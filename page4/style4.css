@@ -63,3 +63,74 @@ footer{
     font-size: 15px;
     color:aliceblue
 }
+#titles{
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}
+
+#question_options{
+    height:250px;
+    width:1000px;
+    margin-left: 150px;
+}
+#question_box{
+    border: 10px solid #3A28A7;
+    border-radius: 10px;
+    background-color: #3A28A7;
+    margin-left: 20px;
+    color: aliceblue;
+}
+#options{
+    color: aliceblue;
+    border:10px solid #3A28A7;
+    border-radius: 10px;
+    background-color: #3A28A7;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#navigation_btns{
+    text-align: center;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 475px;
+    margin-right: 475px;
+}
+
+#back_btn{
+    font-weight: bold;
+    float: left;
+    height:33px;
+    color: white;
+    background-color:#3A28A7;
+    border: 10px solid #3A28A7;
+    border-radius: 5px;
+    cursor:pointer;
+
+}
+#next_btn{
+    font-weight: bold;
+    float: right;
+    height:33px;
+    color: white;
+    background-color:#3A28A7;
+    border: 10px solid #3A28A7;
+    border-radius: 5px;
+    cursor:pointer;
+}
+#home{
+    text-align: center;
+    margin-left: 640px;
+    font-weight: bold;
+    height:33px;
+    color: white;
+    background-color:#3A28A7;
+    border: 10px solid #3A28A7;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+#logo{
+    border:2px solid white;
+    border-radius: 60px;
+}

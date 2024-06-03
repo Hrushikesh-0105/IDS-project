@@ -134,7 +134,10 @@ footer{
 #footer_text{
     white-space: pre-line;
     line-height: 1.6;
-    padding:10px 0;
+    padding:10px;
     font-size: 15px;
-    color:aliceblue
+    color:aliceblue;
+    width:900px;
+    
 }
+

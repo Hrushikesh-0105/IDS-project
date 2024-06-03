@@ -43,7 +43,15 @@ let score_container=document.querySelector("#score_container");
 let display_score=document.querySelector("#score");
 let inner_score_bar=document.querySelector("#inner_score_bar");
 let percentage=document.querySelector("#percentage");
-score_container.classList.add("hidden")
+
+//table
+document.querySelector("#time_score").style.display="none";
+//accessing times on table:
+let times=document.querySelectorAll(".time");
+let times_arr=[0,0,0,0,0];
+
+let first_time=new Date().getTime();
+let second_time;
 
 //random questions generator
 let random_question=[];
@@ -84,7 +92,7 @@ fetchdata().then(data => {
     
     //displaying first question
     if(question_index===0){
-        question.innerText=`Q ${question_index+1}) `+question_object[current_question]["q"];
+        question.innerText=`Q ${question_index+1} `+question_object[current_question]["q"];
         option_1.children[0].nextSibling.textContent=question_object[current_question][1];
         option_2.children[0].nextSibling.textContent=question_object[current_question][2];
         option_3.children[0].nextSibling.textContent=question_object[current_question][3];
@@ -93,27 +101,27 @@ fetchdata().then(data => {
     }
     //adding functionality to next button
     nextbtn.addEventListener("click",()=>{
+        second_time=new Date().getTime();
+        times_arr[question_index]+=(second_time-first_time)/1000;
         if(nextbtn.innerText==="submit"){
-            //hiding questions and options
-            question_section.classList.add("hidden");
-            options_section.classList.add("hidden");
+            //hiding questions and calculator
+            document.querySelector("#middle_part").classList.add("hidden");
             backbtn.classList.add("hidden");
             exit_btn.classList.remove("hidden");
             nextbtn.classList.add("hidden");
-            // table_section.classList.remove("hidden");
-            document.querySelector("#time_left").classList.add("hidden");
             answer_feedbackbtn.classList.remove("hidden");
             let total_score=calculatescore();
             display_score.innerText+=" "+String(total_score)+"/5";
             percentage.innerText=" "+String(total_score*100/5)+"%";
             inner_score_bar.style.width=String(total_score*100/5)+'%'; 
-            score_container.classList.remove("hidden");
-            //hiding calculator button and calculator
-            calculator.classList.add("hidden");
-            toggle_calculator.classList.add("hidden");
+            document.querySelector("#time_score").style.display="flex";
+            for(let i=0;i<5;i++){
+                times[i].innerText=times_arr[i];
+            };
             return;
         }
         ++question_index;
+        first_time=new Date().getTime();
         if(question_index===1){
             exit_btn.classList.add("hidden");
             backbtn.classList.remove("hidden");
@@ -131,10 +139,13 @@ fetchdata().then(data => {
     })
     //adding functionality to back button
     backbtn.addEventListener("click",()=>{
+        second_time=new Date().getTime();
+        times_arr[question_index]+=(second_time-first_time)/1000;
         if(question_index==4){
             nextbtn.innerText="next";
         }
         --question_index;
+        first_time=new Date().getTime();
         current_question=random_question[question_index];
         if(question_index===0){
             exit_btn.classList.remove("hidden");

@@ -1,6 +1,6 @@
 {
   "Mathematics": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) 54",
         "2": "B) 56",
@@ -43,7 +43,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) x = -3",
         "2": "B) x = -1.5",
@@ -86,7 +86,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) f'(x) = 12x^3 - 16x + 2",
         "2": "B) f'(x) = 12x^3 - 16x - 2",
@@ -131,7 +131,7 @@
     }
   },
   "Physics": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) Newton",
         "2": "B) Joule",
@@ -174,7 +174,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) 20 m/s",
         "2": "B) 10 m/s",
@@ -217,7 +217,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) Mass",
         "2": "B) Charge",
@@ -262,7 +262,7 @@
     }
   },
   "Electrical": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) Volt",
         "2": "B) Ohm",
@@ -305,7 +305,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) 25 volts",
         "2": "B) 50 volts",
@@ -348,7 +348,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) 20 volts",
         "2": "B) 24 volts",
@@ -393,7 +393,7 @@
     }
   },
   "Mechanical": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) Newton",
         "2": "B) Joule",
@@ -436,7 +436,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) 15 N",
         "2": "B) 25 N",
@@ -479,7 +479,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) 490 N",
         "2": "B) 780 N",
@@ -524,7 +524,7 @@
     }
   },
   "Biology": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) Nucleus",
         "2": "B) Mitochondria",
@@ -567,7 +567,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) DNA replication",
         "2": "B) Protein synthesis",
@@ -610,7 +610,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) Translation",
         "2": "B) Splicing",
@@ -655,7 +655,7 @@
     }
   },
   "Chemistry": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) H2O",
         "2": "B) CO2",
@@ -698,7 +698,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) 0.25 M",
         "2": "B) 0.5 M",
@@ -741,7 +741,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) 1",
         "2": "B) 2",
@@ -786,7 +786,7 @@
     }
   },
   "History": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) Jawaharlal Nehru",
         "2": "B) Mahatma Gandhi",
@@ -829,7 +829,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) Thomas Jefferson",
         "2": "B) George Washington",
@@ -872,7 +872,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) Chandragupta Maurya",
         "2": "B) Ashoka the Great",
@@ -917,7 +917,7 @@
     }
   },
   "General Knowledge": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) London",
         "2": "B) Paris",
@@ -960,7 +960,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) Leonardo da Vinci",
         "2": "B) Vincent van Gogh",
@@ -1003,7 +1003,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) Iron",
         "2": "B) Gold",
@@ -1048,7 +1048,7 @@
     }
   },
   "Space and Astronomy": {
-    "easy": {
+    "Easy": {
       "1": {
         "1": "A) Venus",
         "2": "B) Jupiter",
@@ -1091,7 +1091,7 @@
       },
       "time": 5
     },
-    "med": {
+    "Medium": {
       "1": {
         "1": "A) Asterism",
         "2": "B) Constellation",
@@ -1134,7 +1134,7 @@
       },
       "time": 10
     },
-    "hard": {
+    "Hard": {
       "1": {
         "1": "A) Earth",
         "2": "B) Jupiter",
